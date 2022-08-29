@@ -20,21 +20,19 @@
 	*/
 	
 	$(function () {
-			$('div').mouseenter(function() {
-				$(this).css('background-color', 'yellow');
-				$(this).children('ul').children('li').eq(2).css('background-color', 'red')
-			});
-
-			$('div').click(function() {
-				$(this).children('ul').slideUp('slow');
-			});
-
-			$('div').mouseleave(function() {
-				$(this).children('ul').slideDown('slow');
-				$(this).css('background-color', 'transparent');
-				$(this).children('ul').children('li').eq(2).css('background-color', 'transparent')
-			});
+		$('div').mouseenter(function() {
+			$(this).css('background-color', 'yellow');
+			$(this).children('ul').children('li').eq(2).css('background-color', 'red')
 		});
+		$('div').click(function() {
+			$(this).children('ul').slideUp('slow');
+		});
+		$('div').mouseleave(function() {
+			$(this).children('ul').slideDown('slow');
+			$(this).css('background-color', 'transparent');
+			$(this).children('ul').children('li').eq(2).css('background-color', 'transparent')
+		});
+	});
 
 	</script>
 	<style> 

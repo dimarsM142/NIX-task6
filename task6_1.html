@@ -66,19 +66,18 @@
 	<script>
 
 
-$(document).ready(function() {
-	/** ЗАДАНИЕ 1
-		- В таблице с id="books" каждую четную строку выделите другим цветом
-		- В таблице с id="books" выберите полное название книги AJAX
+      $(document).ready(function() {
+	    /** ЗАДАНИЕ 1
+		  - В таблице с id="books" каждую четную строку выделите другим цветом
+		  - В таблице с id="books" выберите полное название книги AJAX
 			(то есть, "Ajax в действии")
 			и добавьте его в <span> вместо строки "какое-то название"
 			(третий <p> в <div id="news">)
-	*/
-
-    $('#books tr:nth-child(even)').css("background-color", "yellow");
-    $('#news').find('p').eq(2).find('span').html(
-        name = $('#books').find('tr').eq(2).find('td').eq(1).html()
-    );
+	    */
+          $('#books tr:nth-child(even)').css("background-color", "yellow");
+          $('#news').find('p').eq(2).find('span').html(
+              name = $('#books').find('tr').eq(2).find('td').eq(1).html()
+          );
     	/** ЗАДАНИЕ 2
 		  - В таблице с id="books" выберите названия всех языков/технологий и для каждого языка
 			- сформируйте строку вида "название.pdf", например "ajax.pdf"
@@ -87,13 +86,11 @@ $(document).ready(function() {
 			Например, у книги для "AJAX" ссылка должна выглядеть как:
 			<a class="doc" href="ajax.pdf">купить </a>
 	  */
-    $('#books .doc').each(function() {
-        let refName = $(this).parent().prev().text() + '.pdf';
-			  $(this).attr('href', refName).text('придбати');
-		});
-
-
-});
+          $('#books .doc').each(function() {
+              let refName = $(this).parent().prev().text() + '.pdf';
+			        $(this).attr('href', refName).text('придбати');
+		      });
+      });
 
 
 	

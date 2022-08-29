@@ -65,28 +65,28 @@
       <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 	<script>
 	
-	/** ЗАДАНИЕ 1
+	  /** ЗАДАНИЕ 1
 		- В таблице с id="books" выберите названия книг из колонки "Технология"
 		- Найдите <span id="book"> и заполните его списком технологий через запятую
 		- Названия технологий не должны повторяться!
 		- Результат должен быть следующим:
-			<span id="book">XML, AJAX, PHP, Java</span>
-	*/
-	$(function () {
-		let arrStart = []
-        $('#books tbody tr').each(function(e) {
-			arrStart.push($(this).children('td').eq(0).html());
-		});
-		let arrValue = Array.from(new Set(arrStart));
-        for(let i = 0; i < arrValue.length; i++){
-            if (i != arrValue.length - 1) {
-				$('#book').html($('#book').html() + arrValue[i] + ', ');
-			}
-			else {
-				$('#book').html($('#book').html() + arrValue[i]);
-			}
-        }
-	});
+		<span id="book">XML, AJAX, PHP, Java</span>
+	  */
+	    $(function () {
+		      let arrStart = []
+          $('#books tbody tr').each(function(e) {
+			        arrStart.push($(this).children('td').eq(0).html());
+		      });
+		      let arrValue = Array.from(new Set(arrStart));
+          for(let i = 0; i < arrValue.length; i++){
+              if (i != arrValue.length - 1) {
+				          $('#book').html($('#book').html() + arrValue[i] + ', ');
+			        }
+			        else {
+				          $('#book').html($('#book').html() + arrValue[i]);
+			        }
+          }
+	    });
 	</script>
 	
 </head>

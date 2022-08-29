@@ -68,31 +68,30 @@
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 	<script>
 
-    $(function () {
+      $(function () {
         	/** ЗАДАНИЕ 1
-		       - В <div id="news"> скрыть все элементы <span> с классом "hidden"
-		       - При нажатии левой кнопки мышки на элемент <p> скрытые элементы <span> должен показываться.
-			     При повторном нажатии - прятаться.
-	      */
-        $('#news .hidden').hide();
-        $('#news p').on('click', function () {
-				  $(this).children('.hidden').toggle();
-        });
-        /** ЗАДАНИЕ 2
-		        - В таблице с id="books" при наведении курсора мышки на элемент <tr> должны:
-			      - меняться цвет фона данной строки таблицы
-			      - текст в колонке "Технология" выделяться полужирным
-	      */
-        $('#books tr').mouseenter(function() {
-				    $(this).css('background-color', 'yellow');
-				     $(this).children('td').eq(0).css('font-weight', 'bold');
-			  })
-        $('#books tr').mouseleave(function() {
-				    $(this).css('background-color', 'transparent');
-				     $(this).children('td').eq(0).css('font-weight', 'normal');
-			  })
-
-    });
+		      - В <div id="news"> скрыть все элементы <span> с классом "hidden"
+		      - При нажатии левой кнопки мышки на элемент <p> скрытые элементы <span> должен показываться.
+			    При повторном нажатии - прятаться.
+	        */
+          $('#news .hidden').hide();
+          $('#news p').on('click', function () {
+				      $(this).children('.hidden').toggle();
+          });
+          /** ЗАДАНИЕ 2
+		      - В таблице с id="books" при наведении курсора мышки на элемент <tr> должны:
+			    - меняться цвет фона данной строки таблицы
+			    - текст в колонке "Технология" выделяться полужирным
+	        */
+          $('#books tr').mouseenter(function() {
+				      $(this).css('background-color', 'yellow');
+				      $(this).children('td').eq(0).css('font-weight', 'bold');
+			    })
+          $('#books tr').mouseleave(function() {
+				      $(this).css('background-color', 'transparent');
+				      $(this).children('td').eq(0).css('font-weight', 'normal');
+			    })
+      });
 
 
 
